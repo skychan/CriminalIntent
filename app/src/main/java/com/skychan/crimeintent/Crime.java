@@ -1,5 +1,6 @@
 package com.skychan.crimeintent;
 
+import java.util.Date;
 import java.util.UUID;
 
 /**
@@ -7,6 +8,28 @@ import java.util.UUID;
  */
 
 public class Crime {
+
+    private Date mDate;
+
+    public void setmDate(Date mDate) {
+        this.mDate = mDate;
+    }
+
+    public Date getmDate() {
+        return mDate;
+    }
+
+    public boolean ismSolved() {
+        return mSolved;
+    }
+
+    public void setmSolved(boolean mSolved) {
+        this.mSolved = mSolved;
+    }
+
+    private boolean mSolved;
+
+
     public UUID getmId() {
         return mId;
     }
