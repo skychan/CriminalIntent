@@ -18,7 +18,7 @@ public class Crime {
     }
 
 //    public String getDate() {
-//        return DateFormat.format("EEEEMMMMdYYYY", mDate);
+//        return DateFormat.getLongDateFormat(null).format(mDate);
 //    }
     public Date getDate() {
         return mDate;
@@ -27,7 +27,7 @@ public class Crime {
         return mSolved;
     }
 
-    public void setmSolved(boolean mSolved) {
+    public void setSolved(boolean mSolved) {
         this.mSolved = mSolved;
     }
 
@@ -38,21 +38,27 @@ public class Crime {
         return mId;
     }
 
-    public String getTtitle() {
-        return mTtitle;
+    public String getTitle() {
+        return mTitle;
     }
 
     private UUID mId;
 
-    public void setTtitle(String mTtitle) {
-        this.mTtitle = mTtitle;
+    public void setTitle(String mTitle) {
+        this.mTitle = mTitle;
     }
 
-    private String mTtitle;
+    private String mTitle;
 
     public Crime() {
         mId = UUID.randomUUID();
         mDate = new Date();
+    }
+
+    @Override
+    public String toString()
+    {
+        return mTitle;
     }
 
 }
