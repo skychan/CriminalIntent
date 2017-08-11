@@ -1,5 +1,7 @@
 package com.skychan.crimeintent;
 
+import android.text.format.DateFormat;
+
 import java.util.Date;
 import java.util.UUID;
 
@@ -11,14 +13,16 @@ public class Crime {
 
     private Date mDate;
 
-    public void setmDate(Date mDate) {
+    public void setDate(Date mDate) {
         this.mDate = mDate;
     }
 
-    public Date getmDate() {
+//    public String getDate() {
+//        return DateFormat.format("EEEEMMMMdYYYY", mDate);
+//    }
+    public Date getDate() {
         return mDate;
     }
-
     public boolean ismSolved() {
         return mSolved;
     }
@@ -30,17 +34,17 @@ public class Crime {
     private boolean mSolved;
 
 
-    public UUID getmId() {
+    public UUID getId() {
         return mId;
     }
 
-    public String getmTtitle() {
+    public String getTtitle() {
         return mTtitle;
     }
 
     private UUID mId;
 
-    public void setmTtitle(String mTtitle) {
+    public void setTtitle(String mTtitle) {
         this.mTtitle = mTtitle;
     }
 
@@ -48,6 +52,7 @@ public class Crime {
 
     public Crime() {
         mId = UUID.randomUUID();
+        mDate = new Date();
     }
 
 }
