@@ -1,6 +1,6 @@
 package com.skychan.crimeintent;
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 
 /**
  * Created by CSK on 2017/8/11.

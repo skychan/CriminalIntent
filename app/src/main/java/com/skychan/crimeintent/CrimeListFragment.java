@@ -1,6 +1,6 @@
 package com.skychan.crimeintent;
 
-import android.app.ListFragment;
+import android.support.v4.app.ListFragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,9 +38,9 @@ public class CrimeListFragment extends ListFragment {
 //        Log.d(TAG, c.getTitle() + " was clicked");
 
         /**
-         * Start CrimeActivity
+         * Start CrimePagerActivity with this crime
          */
-        Intent i = new Intent(getActivity(), CrimeActivity.class);
+        Intent i = new Intent(getActivity(), CrimePagerActivity.class);
         i.putExtra(CrimeFragment.EXTRA_CRIME_ID, c.getId());
         startActivityForResult(i, REQUEST_CRIME);
 
